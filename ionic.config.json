@@ -1,0 +1,7 @@
+{
+  "name": "proyecto-wanda",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
