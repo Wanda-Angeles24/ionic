@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>padre</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--<ion-content>
+  {{texto}}
+<app-hijo [datosDelPadre]="'valor que viene desde el padre'"></app-hijo>
+
+</ion-content> -->
+
+<ion-item>
+
+  <ion-label>Texto desde Padre</ion-label>
+  <ion-input [(ngModel)]="texto"></ion-input>
+</ion-item>
+
+<app-hijo>[datosDelPadre]="texto"></app-hijo>

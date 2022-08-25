@@ -13,5 +13,77 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!--
+  <ion-button (click)="presentAlert()">Click Me</ion-button>
+  
+
+  <ion-input value="wanditha"></ion-input>
+
+  <ion-input type="int" placeholder="Enter Input"></ion-input>
+-->
+<ion-input type="int" placeholder="Enter Input"></ion-input>
+
+  <ion-input [(ngModel)]="entrada"></ion-input>
+  
+<h1>{{entrada}} </h1>
+
+<!--
+<ion-list>
+  <ion-item>
+    <ion-select [(ngModel)]="seleccionf" placeholder="Select fruit" (ionChange)="imprimirSelect()">
+      <ion-select-option value="apples">Apples</ion-select-option>
+      <ion-select-option value="oranges">Oranges</ion-select-option>
+      <ion-select-option value="bananas">Bananas</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+--->
+
+<ion-text color="secondary">
+  <h1>REGISTRO: </h1>
+</ion-text>
+
+<!--
+<ion-list>
+  <ion-item>
+    <ion-select placeholder="Seleccciona una Carrera">
+      <ion-select-option value="industrial">Ing. Industial</ion-select-option>
+      <ion-select-option value="mecanica">Ing. Mecanica</ion-select-option>
+      <ion-select-option value="quimica">Ing. Quimica</ion-select-option>
+    </ion-select>
+--->
+
+
+<ion-list>
+  <ion-item>
+    <ion-select [(ngModel)]="carrera" placeholder="Selecciona una carrera" (ionChange)="imprimirSelect()">
+      <ion-select-option  *ngFor="let item of carrera" value="prof">{{item.nombre}}</ion-select-option>
+      
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+
+
+
+<ion-list>
+  <ion-item>
+    <ion-select placeholder="Seleccciona la Universidad">
+      <ion-select-option value="ins">ITA</ion-select-option>
+      <ion-select-option value="ins">UAT</ion-select-option>
+      <ion-select-option value="ins">UPTrep</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+
+<!-- 
+  <app-explore-container name="Wanda Angeles"></app-explore-container>
 </ion-content>
+-->
+
+
+<ion-button [routerLink]="['/tabs/calculadora',2]" expand="block">Ir a sumar</ion-button>
+
+
+<ion-button (click)="IraSumar()" expand="block"> Ir a Sumar</ion-button>
